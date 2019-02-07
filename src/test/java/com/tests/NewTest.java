@@ -32,17 +32,17 @@ public class NewTest {
 	//  driver.manage().window().maximize();
 	  //WebElement Searchbox = driver.findElement(By.id("lst-ib"));
 	  
-	  driver.get("http://localhost:8080/BankApp1/");
+	  driver.get("http://10.89.44.105:9001/BankApp1/");
 	  //driver.get("https://google.ca");
 	  driver.manage().window().maximize();
       driver.getTitle();
 	  String title = driver.getCurrentUrl();
 		System.out.println("Getting the title:"+title);
-		WebElement Searchbox = driver.findElement(By.name("username"));
+		WebElement Searchbox = driver.findElement(By.name("uname"));
 		System.out.println("The value is:"+Searchbox);
 		//Searchbox.sendKeys("sudhaaug84@gmail.com");
 		Searchbox.sendKeys("abc");
-		//driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		Searchbox.submit();
 		System.out.println("after click");
 		

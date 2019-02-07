@@ -32,7 +32,7 @@ public class NewTest {
 	//  driver.manage().window().maximize();
 	  //WebElement Searchbox = driver.findElement(By.id("lst-ib"));
 	  
-	  driver.get("http://10.89.44.105:9001/BankApp1/");
+	  driver.get("http://10.89.44.105:9001/BankExample/");
 	  //driver.get("https://google.ca");
 	  driver.manage().window().maximize();
       driver.getTitle();

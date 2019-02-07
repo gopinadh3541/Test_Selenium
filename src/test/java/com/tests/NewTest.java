@@ -35,11 +35,13 @@ public class NewTest {
 	  driver.get("http://10.89.44.105:9001/BankExample/");
 	  //driver.get("https://google.ca");
 	  driver.manage().window().maximize();
-      driver.getTitle();
-	  String title = driver.getCurrentUrl();
-		System.out.println("Getting the title:"+title);
+	  String title = driver.getTitle();
+	  driver.getCurrentUrl();
+	  String expectedTitle="Banking";
+	  Assert.assertEquals(expectedTitle, title);
+		System.out.println("After Assertion:"+title+" "+expectedTitle+" Matched");
 		WebElement Searchbox = driver.findElement(By.name("uname"));
-		System.out.println("The value is:"+Searchbox);
+		//System.out.println("The value is:"+Searchbox);
 		//Searchbox.sendKeys("sudhaaug84@gmail.com");
 		Searchbox.sendKeys("abc");
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
